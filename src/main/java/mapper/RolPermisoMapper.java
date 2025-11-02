@@ -93,4 +93,8 @@ public interface RolPermisoMapper {
      * @mbg.generated Sun Nov 02 11:02:07 GMT-05:00 2025
      */
     int updateByPrimaryKey(RolPermiso row);
+
+    //permisos xd 
+    List<model.Permiso> selectPermisosPorRolId(@Param("rolId") int rolId);
+
 }

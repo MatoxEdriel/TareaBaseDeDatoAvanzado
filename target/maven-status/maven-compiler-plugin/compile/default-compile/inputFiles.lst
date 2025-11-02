@@ -34,6 +34,7 @@
 /Users/ingcampoverde/Documents/UG/databaseAdvance/BaseDeDatoAvanzado/src/main/java/model/Usuario.java
 /Users/ingcampoverde/Documents/UG/databaseAdvance/BaseDeDatoAvanzado/src/main/java/model/UsuarioExample.java
 /Users/ingcampoverde/Documents/UG/databaseAdvance/BaseDeDatoAvanzado/src/main/java/services/LoginService.java
+/Users/ingcampoverde/Documents/UG/databaseAdvance/BaseDeDatoAvanzado/src/main/java/services/PermisoService.java
 /Users/ingcampoverde/Documents/UG/databaseAdvance/BaseDeDatoAvanzado/src/main/java/utils/MyBatisUtil.java
 /Users/ingcampoverde/Documents/UG/databaseAdvance/BaseDeDatoAvanzado/src/main/java/view/MainMenu.java
 /Users/ingcampoverde/Documents/UG/databaseAdvance/BaseDeDatoAvanzado/src/main/java/view/admin/ViewAdmin.java

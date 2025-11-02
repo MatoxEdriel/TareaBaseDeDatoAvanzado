@@ -253,4 +253,11 @@
       permiso_id = #{permisoId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+    <select id="selectPermisosPorRolId" parameterType="int" resultType="model.Permiso">
+    SELECT p.*
+    FROM roles_permisos rp
+    INNER JOIN permisos p ON rp.permiso_id = p.id
+    WHERE rp.rol_id = #{rolId};
+  </select>
 </mapper>

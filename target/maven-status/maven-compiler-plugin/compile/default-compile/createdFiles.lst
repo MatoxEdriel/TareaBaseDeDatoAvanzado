@@ -55,6 +55,7 @@ model/NotaFinalExample$Criteria.class
 model/NotaPrimerParcialExample.class
 model/NotaPrimerParcialExample$Criteria.class
 view/students/ViewStudent.class
+services/PermisoService.class
 model/NotaSegundoParcialExample$Criterion.class
 model/UsuarioExample$Criteria.class
 mapper/EstudianteMateriaMapper.class
