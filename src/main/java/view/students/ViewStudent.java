@@ -20,19 +20,19 @@ public class ViewStudent {
 
             switch (options) {
                 case 1:
-                    System.out.println("📚 Mostrando tus notas...");
+                    System.out.println("Mostrando tus notas...");
                     break;
                 case 2:
-                    System.out.println("🧾 Listando materias...");
+                    System.out.println("Listando materias...");
                     break;
                 case 3:
-                    System.out.println("👤 Mostrando datos personales...");
+                    System.out.println("Mostrando datos personales...");
                     break;
                 case 0:
-                    System.out.println("🔙 Volviendo al menú principal...");
+                    System.out.println("Volviendo al menú principal...");
                     break;
                 default:
-                    System.out.println("⚠️ Opción inválida. Intente nuevamente.");
+                    System.out.println("Opción inválida. Intente nuevamente.");
             }
         } while (options != 0);
         in.close();
