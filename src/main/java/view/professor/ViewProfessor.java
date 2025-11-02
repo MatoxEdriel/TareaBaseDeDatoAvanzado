@@ -1,4 +1,5 @@
 package view.professor;
+
 import services.NotasService;
 import java.math.BigDecimal;
 import java.util.Scanner;
@@ -27,11 +28,11 @@ public class ViewProfessor {
             switch (options) {
                 case 1:
                     System.out.println("Ingresando notas...");
-
+                    ingresarNota();
                     break;
                 case 2:
                     System.out.println("Modificando notas...");
-
+                    editarNota();
                     break;
                 case 3:
                     System.out.println("Consultando notas...");
@@ -54,19 +55,30 @@ public class ViewProfessor {
         System.out.print("ID del estudiante: ");
         nota.setIdEstudiante(in.nextInt());
 
-        nota.setNotaDeberes(leerNotaValida("nota de deberes"));
-        nota.setNotaTalleres(leerNotaValida("nota de talleres"));
-        nota.setNotaLeccion(leerNotaValida("nota de lecciones"));
-        nota.setNotaExamen(leerNotaValida("nota de examen"));
-
-        BigDecimal promedio = calcularPromedio(
-                nota.getNotaDeberes(),
-                nota.getNotaTalleres(),
-                nota.getNotaLeccion(),
-                nota.getNotaExamen());
-        nota.setPromedio(promedio);
+        System.out.print("ID de la materia: ");
+        nota.setIdMateria(in.nextInt());
+        in.nextLine();
+        nota.setDeberes(leerNotaValida("nota de deberes"));
+        nota.setTalleres(leerNotaValida("nota de talleres"));
+        nota.setLecciones(leerNotaValida("nota de lecciones"));
+        nota.setExamen(leerNotaValida("nota de examen"));
 
         notaService.crearNota(nota);
+    }
+
+    private static BigDecimal leerNotaValida(String nombreCampo) {
+        BigDecimal nota;
+        do {
+            System.out.print("Ingrese " + nombreCampo + " (0 a 10): ");
+            double valor = in.nextDouble();
+            if (valor < 0 || valor > 10) {
+                System.out.println("La nota debe estar entre 0 y 10.");
+                nota = null;
+            } else {
+                nota = BigDecimal.valueOf(valor);
+            }
+        } while (nota == null);
+        return nota;
     }
 
     private static void editarNota() {
@@ -75,20 +87,13 @@ public class ViewProfessor {
         in.nextLine();
 
         NotaPrimerParcial nota = new NotaPrimerParcial();
-        nota.setIdNota(idNota);
+        nota.setId(idNota);
 
         System.out.println("\n--- Actualización de Notas ---");
-        nota.setNotaDeberes(leerNotaValida("nueva nota de deberes"));
-        nota.setNotaTalleres(leerNotaValida("nueva nota de talleres"));
-        nota.setNotaLeccion(leerNotaValida("nueva nota de lecciones"));
-        nota.setNotaExamen(leerNotaValida("nueva nota de examen"));
-
-        BigDecimal promedio = calcularPromedio(
-                nota.getNotaDeberes(),
-                nota.getNotaTalleres(),
-                nota.getNotaLeccion(),
-                nota.getNotaExamen());
-        nota.setPromedio(promedio);
+        nota.setDeberes(leerNotaValida("nueva nota de deberes"));
+        nota.setTalleres(leerNotaValida("nueva nota de talleres"));
+        nota.setLecciones(leerNotaValida("nueva nota de lecciones"));
+        nota.setExamen(leerNotaValida("nueva nota de examen"));
 
         notaService.editarNota(nota);
     }

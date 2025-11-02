@@ -22,5 +22,7 @@
         <mapper resource="mapper/PermisoMapper.xml" />
         <mapper resource="mapper/RolPermisoMapper.xml" />
         <mapper resource="mapper/UsuarioMapper.xml" />
+        <mapper resource="mapper/NotaPrimerParcialMapper.xml" />
+
     </mappers>
 </configuration>
