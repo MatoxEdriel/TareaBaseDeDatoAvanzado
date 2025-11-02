@@ -6,27 +6,16 @@
 <generatorConfiguration>
   <context id="MyBatis3" targetRuntime="MyBatis3">
   
-    <jdbcConnection driverClass="org.mariadb.jdbc.Driver"
-                    connectionURL="jdbc:mariadb://localhost:3306/BDA_6_7"
-                    userId="root"
-                    password="root123" />
+ <jdbcConnection driverClass="org.mariadb.jdbc.Driver"
+                connectionURL="jdbc:mariadb://localhost:3306/BDA_6_7?useInformationSchema=true&amp;nullCatalogMeansCurrent=false"        
+                userId="root"
+                password="root123" />
     
     <javaModelGenerator targetPackage="model" targetProject="src/main/java" />
     <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
     <javaClientGenerator type="XMLMAPPER" targetPackage="mapper" targetProject="src/main/java" />
     
-
-    <table tableName="usuarios" domainObjectName="Usuario"/>
-    <table tableName="roles" domainObjectName="Rol"/>
-    <table tableName="permisos" domainObjectName="Permiso"/>
-    <table tableName="roles_permisos" domainObjectName="RolPermiso"/>
-    <table tableName="Estudiantes" domainObjectName="Estudiante"/>
-    <table tableName="Materias" domainObjectName="Materia"/>
-    <table tableName="NotasFinales" domainObjectName="NotaFinal"/>
-    <table tableName="notas_primer_parcial" domainObjectName="NotaPrimerParcial"/>
-    <table tableName="notas_segundo_parcial" domainObjectName="NotaSegundoParcial"/>
-    <table tableName="Estado" domainObjectName="Estado"/>
-    <table tableName="Estudiantes_Materias" domainObjectName="EstudianteMateria"/>
+<table schema="BDA_6_7" tableName="notas_primer_parcial" domainObjectName="NotaPrimerParcial"/>
 
   </context>
 </generatorConfiguration>
