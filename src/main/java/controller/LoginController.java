@@ -2,7 +2,6 @@ package controller;
 
 import java.util.List;
 
-import org.checkerframework.checker.units.qual.s;
 
 import model.Permiso;
 import model.Rol;

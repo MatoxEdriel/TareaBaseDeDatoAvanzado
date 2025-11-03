@@ -1,4 +1,4 @@
-package services;
+package services.common;
 
 import org.apache.ibatis.session.SqlSession;
 

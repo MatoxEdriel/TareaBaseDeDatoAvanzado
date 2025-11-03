@@ -1,4 +1,9 @@
 package services;
+
+import services.common.LoginService;
+import services.common.NotasService;
+import services.common.PermisoService;
+
 public class ServiceManager {
 
     private static ServiceManager instance;
@@ -6,6 +11,7 @@ public class ServiceManager {
     private final LoginService loginService;
     private final PermisoService permisoService;
     private final NotasService notasService;
+    
 
     private ServiceManager() {
         this.loginService = new LoginService();

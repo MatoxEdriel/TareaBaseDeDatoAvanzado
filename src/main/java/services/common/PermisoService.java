@@ -1,4 +1,4 @@
-package services;
+package services.common;
 
 import java.util.List;
 import org.apache.ibatis.session.SqlSession;
