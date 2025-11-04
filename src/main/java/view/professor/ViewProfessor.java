@@ -134,7 +134,7 @@ public class ViewProfessor {
 
             notaService.editarNotaSegundoParcial(nota2);
         } else {
-            System.out.println(" Opción inválida. Solo 1 o 2.");
+            System.out.println("Opción inválida. Solo 1 o 2.");
         }
     }
 

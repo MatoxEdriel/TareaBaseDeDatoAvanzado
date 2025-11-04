@@ -55,7 +55,7 @@ public class ViewStudent {
             return;
         }
 
-        System.out.println("\n📘 === NOTAS FINALES ===");
+        System.out.println("\n=== NOTAS FINALES ===");
         for (NotaFinal nota : notasFinales) {
             System.out.println("-----------------------------------");
             System.out.println("Materia ID: " + nota.getIdMateria());

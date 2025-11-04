@@ -130,7 +130,7 @@ public class ViewAdmin {
             return;
         }
 
-        System.out.println("\n=== NOTAS FINALES DEL ESTUDIANTE ===");
+        System.out.println("\n=== NOTAS FINALES DEL ESTUDINTE ===");
         for (NotaFinal nota : notas) {
             System.out.println("-----------------------------------");
             System.out.println("Materia ID: " + nota.getIdMateria());

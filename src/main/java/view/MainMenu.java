@@ -12,7 +12,7 @@ public class MainMenu {
 
         do {
             System.out.println("===================================");
-            System.out.println("   🎓 SISTEMA DE GESTIÓN ACADÉMICA ");
+            System.out.println("  SISTEMA DE GESTIÓN ACADÉMICA ");
             System.out.println("===================================");
             System.out.println("1. Ingresar como Administrador");
             System.out.println("2. Ingresar como Docente");
@@ -33,10 +33,10 @@ public class MainMenu {
                     LoginController.login("estudiante");
                     break;
                 case 0:
-                    System.out.println("👋 Saliendo del sistema...");
+                    System.out.println(" Saliendo del sistema...");
                     break;
                 default:
-                    System.out.println("⚠️ Opción inválida. Intente nuevamente.");
+                    System.out.println("Opción inválida. Intente nuevamente.");
             }
         } while (options != 0);
         in.close();
